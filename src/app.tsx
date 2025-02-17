@@ -96,6 +96,7 @@ function App() {
 
       </header>
 
+
           {/* section content */}
           <section className="justify-center flex px-4 sm:px-0">
   <div className="w-full max-w-[736px] flex flex-col items-center justify-center -translate-y-16">
@@ -146,10 +147,10 @@ function App() {
                     <input type="text" value={editingText} onChange={(e) => setEditingText(e.target.value)} autoFocus className="bg-zinc-700 text-zinc-400 px-2 rounded-md" />
                     <div className="flex gap-2">
                       <button onClick={() => saveEditing(todo.id)} className="bg-green-500 px-3 py-1 text-white rounded-lg">
-                        <Save />
+                        <Save size={10} />
                       </button>
                       <button onClick={cancelEditing} className="bg-red-500 px-3 py-1 text-white rounded-lg">
-                        <X />
+                        <X size={10} />
                       </button>
                     </div>
                   </div>
