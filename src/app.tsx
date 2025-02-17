@@ -95,7 +95,6 @@ function App() {
         </div>
 
       </header>
-          {/* header aplication */}
 
           {/* section content */}
           <section className="justify-center flex px-4 sm:px-0">
@@ -159,11 +158,11 @@ function App() {
               <div className="flex items-center justify-center gap-3">
                 {editingId !== todo.id && (
                   <button onClick={() => starEditing(todo)} className="text-zinc-500 text-sm flex items-center justify-center" disabled={todo.completed}>
-                    <Pencil size={16} className="text-blue-500" /> {/* Ícone azul */}
+                    <Pencil size={16} className="text-blue-500" /> 
                   </button>
                 )}
                 <button onClick={() => deleteTodo(todo.id)} className="text-zinc-500 text-sm">
-                <Trash2 size={16} className="text-red-500" /> {/* Ícone vermelho */}
+                <Trash2 size={16} className="text-red-500" /> 
                 </button>
               </div>
             </li>
@@ -171,7 +170,7 @@ function App() {
         </ul>
       ) : (
         <div className="mt-20 flex flex-col items-center gap-5 justify-center">
-          <Notebook size={150} className="text-gray-600" /> {/* Ícone de caderno verde */}
+          <Notebook size={150} className="text-gray-600" />
           <div>
             <p className="text-zinc-400 text-base">Você ainda não tem tarefas cadastradas</p>
             <p className="text-zinc-500 text-base">Crie tarefas e organize seus itens a fazer</p>
