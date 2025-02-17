@@ -1,5 +1,5 @@
 import { useState , useEffect} from "react"
-import  { Save, X }from  'lucide-react'
+import  { Pencil, Trash2, Rocket, Save, X }from  'lucide-react'
 
 interface Todo{
   id: number,
@@ -82,7 +82,7 @@ function App() {
 
         <div className="flex gap-2 -translate-y-6">
 
-          <img src="public/rocket.png" alt="rocket-logo" />
+        <Rocket size={48} className="text-purple-600" />
           <div className="flex">
 
             <p className="text-4xl text-blue-400 font-black">to</p>
@@ -159,11 +159,11 @@ function App() {
               <div className="flex items-center justify-center gap-3">
                 {editingId !== todo.id && (
                   <button onClick={() => starEditing(todo)} className="text-zinc-500 text-sm flex items-center justify-center" disabled={todo.completed}>
-                    <img src="public/escrever.png" alt="" />
+                    <Pencil size={16} className="text-blue-500" /> {/* Ícone azul */}
                   </button>
                 )}
                 <button onClick={() => deleteTodo(todo.id)} className="text-zinc-500 text-sm">
-                  <img className="w-4" src="public/delete.png" alt="" />
+                <Trash2 size={16} className="text-red-500" /> {/* Ícone vermelho */}
                 </button>
               </div>
             </li>
