@@ -1,5 +1,5 @@
 import { useState , useEffect} from "react"
-import  { Pencil, Trash2, Rocket, Save, X }from  'lucide-react'
+import  { Pencil, Notebook, Trash2, Rocket, Save, X }from  'lucide-react'
 
 interface Todo{
   id: number,
@@ -171,7 +171,7 @@ function App() {
         </ul>
       ) : (
         <div className="mt-20 flex flex-col items-center gap-5 justify-center">
-          <img className="w-19" src="public/Clipboard.png" alt="" />
+          <Notebook size={150} className="text-gray-600" /> {/* Ícone de caderno verde */}
           <div>
             <p className="text-zinc-400 text-base">Você ainda não tem tarefas cadastradas</p>
             <p className="text-zinc-500 text-base">Crie tarefas e organize seus itens a fazer</p>
