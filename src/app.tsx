@@ -1,5 +1,5 @@
 import { useState , useEffect} from "react"
-import  { Pencil, Notebook, Trash2, Rocket, Save, X }from  'lucide-react'
+import  { Pencil, Notebook, Trash2, Rocket, Save, X, PlusCircle }from  'lucide-react'
 
 interface Todo{
   id: number,
@@ -107,12 +107,12 @@ function App() {
           value={inputValue} 
           onChange={(e) => setInputValue(e.target.value)}
           type="text" 
-          placeholder="Digite uma nova tarefa"
+          placeholder="Enter a new task"
           className="w-full sm:w-[628px] h-[54px] bg-zinc-700 outline-none text-zinc-400 shadow-lg rounded-lg px-4" 
         />
         <button type="submit" className="flex w-20 text-zinc-50 gap-1 rounded-lg shadow-lg bg-blue-500 h-[54px] justify-center items-center">
-          <p>Criar</p>
-          <img src="public/plus.svg" alt="" />
+          <p>Add</p>
+          <PlusCircle size={20} className="" />
         </button>
       </form>
     </div>
@@ -121,11 +121,11 @@ function App() {
       <p className="text-zinc-500">Tasks</p>
       <div className="flex flex-wrap justify-between mt-3 gap-3">
         <div className="flex gap-1 items-center justify-center">
-          <p className="font-bold text-sm text-blue-400">Tarefas Criadas</p>
+          <p className="font-bold text-sm text-blue-400">created</p>
           <p className="font-bold text-sm text-zinc-100 bg-zinc-500 w-6 h-4 flex items-center justify-center rounded-3xl">{todos.length}</p>
         </div>
         <div className="flex gap-3 items-center justify-center">
-          <p className="font-bold text-sm text-purple-500">Concluídas</p>
+          <p className="font-bold text-sm text-purple-500">completed</p>
           <div className="flex rounded-3xl items-center justify-center gap-2 bg-zinc-500 px-3 h-6">
             <p className="font-bold text-sm text-zinc-100 flex items-center justify-center">{todos.filter(todo => todo.completed).length}</p>
             <p className="text-zinc-100">de</p>
@@ -173,8 +173,8 @@ function App() {
         <div className="mt-20 flex flex-col items-center gap-5 justify-center">
           <Notebook size={150} className="text-gray-600" />
           <div>
-            <p className="text-zinc-400 text-base">Você ainda não tem tarefas cadastradas</p>
-            <p className="text-zinc-500 text-base">Crie tarefas e organize seus itens a fazer</p>
+            <p className="text-zinc-400 text-base">You don't have tasks registered yet</p>
+            <p className="text-zinc-500 text-base">Create tasks and organize your to-do items</p>
           </div>
         </div>
       )}
