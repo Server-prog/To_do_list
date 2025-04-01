@@ -1,7 +1,7 @@
-# To-do list
+# To-do list - lista de afazeres.
 ---
 
-Um APP simples feito com :
+Tecnologias :
 
 ## React
 
